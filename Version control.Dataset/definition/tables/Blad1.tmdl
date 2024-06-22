@@ -1,0 +1,43 @@
+table Blad1
+	lineageTag: 94a1b90d-6674-45c2-8195-9132a1893b48
+
+	column Alfa
+		dataType: int64
+		formatString: 0
+		lineageTag: 6593e45a-7659-418a-af6c-90c83dcea9e7
+		summarizeBy: sum
+		sourceColumn: Alfa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Beta
+		dataType: double
+		lineageTag: c1229163-f2bd-453b-b820-71151807b84d
+		summarizeBy: sum
+		sourceColumn: Beta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Gamma
+		dataType: string
+		lineageTag: 8631edb1-8f82-4dff-a14b-9bd499aeac07
+		summarizeBy: none
+		sourceColumn: Gamma
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Blad1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\tsmet\Downloads\Data science\Microsoft Fabric\Portfolio projects\Data.xlsx"), null, true),
+				    Blad1_Sheet = Source{[Item="Blad1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Blad1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Alfa", Int64.Type}, {"Beta", type number}, {"Gamma", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

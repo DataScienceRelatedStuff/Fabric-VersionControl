@@ -1,0 +1,69 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"591de8e7e0358bf076b3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":960,\"y\":224,\"z\":3000,\"width\":160,\"height\":256,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Blad1.Gamma\"},{\"queryRef\":\"Sum(Blad1.Alfa)\"},{\"queryRef\":\"Sum(Blad1.Beta)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Blad1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Alfa\"},\"Name\":\"Sum(Blad1.Alfa)\",\"NativeReferenceName\":\"Alfa\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Beta\"},\"Name\":\"Sum(Blad1.Beta)\",\"NativeReferenceName\":\"Beta\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Gamma\"},\"Name\":\"Blad1.Gamma\",\"NativeReferenceName\":\"Gamma\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 256.00,
+          "width": 160.00,
+          "x": 960.00,
+          "y": 224.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"7a4eae9c890a3e41134d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":128,\"y\":224,\"z\":2000,\"width\":288,\"height\":224,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Blad1.Gamma\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Blad1.Beta)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Blad1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Gamma\"},\"Name\":\"Blad1.Gamma\",\"NativeReferenceName\":\"Gamma\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Beta\"}},\"Function\":0},\"Name\":\"Sum(Blad1.Beta)\",\"NativeReferenceName\":\"Sum of Beta\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Beta\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 224.00,
+          "width": 288.00,
+          "x": 128.00,
+          "y": 224.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"82c718d2954a1780ec00\",\"layouts\":[{\"id\":0,\"position\":{\"x\":528,\"y\":224,\"z\":1000,\"width\":336,\"height\":192,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Blad1.Gamma\"},{\"queryRef\":\"Sum(Blad1.Alfa)\"},{\"queryRef\":\"Sum(Blad1.Beta)\"},{\"queryRef\":\"CountNonNull(Blad1.Beta)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Blad1\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Beta\"}},\"Function\":0},\"Name\":\"Sum(Blad1.Beta)\",\"NativeReferenceName\":\"Sum of Beta\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Gamma\"},\"Name\":\"Blad1.Gamma\",\"NativeReferenceName\":\"Gamma\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Alfa\"}},\"Function\":0},\"Name\":\"Sum(Blad1.Alfa)\",\"NativeReferenceName\":\"Sum of Alfa\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Beta\"}},\"Function\":5},\"Name\":\"CountNonNull(Blad1.Beta)\",\"NativeReferenceName\":\"Count of Beta\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Beta\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 192.00,
+          "width": 336.00,
+          "x": 528.00,
+          "y": 224.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"8f11338cb05688b9caba\",\"layouts\":[{\"id\":0,\"position\":{\"x\":479.99999999999994,\"y\":32,\"z\":0,\"width\":336,\"height\":64,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Version control\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"32pt\",\"color\":\"#d64550\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 64.00,
+          "width": 336.00,
+          "x": 480.00,
+          "y": 32.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
